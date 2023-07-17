@@ -1,0 +1,101 @@
+ .profile_container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+     
+    max-width:600px;
+    padding:1rem ;
+    margin-bottom:4.5rem;
+   
+}
+
+.profile_container .profile_header{
+
+width:100%;
+
+display: flex;
+flex-direction: column;
+
+align-items: center;
+
+color: var(--color-primary)
+
+}
+
+.profile_header a{
+    font-size: 100px;
+}
+
+.profile_header h2 {
+    font-size: 16px;
+    margin-top: -2.5rem; 
+    margin-bottom: -0.2rem;
+    text-transform: capitalize;
+    
+}
+
+.profile_header h4,h5{
+    margin:-0.1rem 0
+}
+
+.profile_header 
+h5 {
+   
+    margin-bottom: 0.2rem; 
+}
+
+.account_info,.app_setting,.help_support{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+    
+}
+
+.card_one{
+    display: flex;
+   
+    align-items: center;
+    gap:0.5rem;
+    height:80px;
+    background-color: rgba(52, 86, 103, 0.729);
+    padding:0.5rem;
+    color:black;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+}
+
+.card_one:hover{
+   background-color: aqua;
+}
+
+.card_one a{
+    font-size: 50px;
+    margin-top: 1.2rem;
+    
+}
+
+.card_one h4{
+    text-transform: capitalize;
+
+}
+
+.card_one p{
+    font-size: 12px;
+}
+
+
+.card_one h4,.card_one p{
+    margin: 0 0 -0.3rem 0
+}
+
+
+@media(max-width:600px){
+    .profile_container {
+           
+            width:90%
+           
+        }
+}

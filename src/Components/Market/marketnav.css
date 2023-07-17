@@ -1,0 +1,33 @@
+.market_nav{
+    
+    max-width: 600px;
+    padding:0 0.5rem ;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_nav{
+    padding:0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.top_nav h3{
+    margin-top:-0.3rem;
+    margin-bottom: -0.1rem;
+}
+.top_nav a{
+    font-size: 25px;
+}
+.topsec_nav{
+    margin-top:-1.5rem;
+    padding: 0.5rem;
+        display: flex;
+        gap:2rem;
+        cursor: pointer;
+}
+
+@media(max-width:600px){
+    .market_nav{
+        width: 90%;
+    }
+}

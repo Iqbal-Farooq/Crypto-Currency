@@ -1,13 +1,16 @@
 .mainheader_container{
-    /* position:relative; */
-    background-color: cadetblue;
+   
+    
     max-width: 600px;
     padding:0.5rem 1rem;
     margin-top:0.4rem;
     display: flex;
     justify-content:space-between;
 }
-
+.mainheader_container  a{
+    font-size: 30px;
+    color:lightskyblue
+}
 
 @media (max-width:600px){
     .mainheader_container{
