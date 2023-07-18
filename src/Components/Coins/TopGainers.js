@@ -14,7 +14,7 @@ const TopGainers = () => {
             }
         
     }
-  let SortedArray=  [...Gainers].sort((a,b)=>b.price_change_percentage_24h-a.price_change_percentage_24h);
+  let SortedArray=Gainers.sort((a,b)=>b.price_change_percentage_24h-a.price_change_percentage_24h);
   return (<>
     <MarketNav />
 

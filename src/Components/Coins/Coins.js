@@ -22,12 +22,13 @@ const Coin = ({image,name,sm,price,volume,pricechange,marketcap}) => {
                 </div>
                 <div className="coin-data">
                     <p className="coin-price"> ₹{price}</p>
-                   {pricechange<0 ? (
+                   {pricechange<0 &&(
                         <p className="coin-percent red">{pricechange.toFixed(2)}%</p>
-                    ):(
-                        <p className="coin-percent green">{pricechange.toFixed(2)}%</p>
-                    )
-                }
+                    )}
+                    
+                     {  pricechange >= 0 && pricechange !==null && <p className="coin-percent green">{pricechange.toFixed(2)}%</p>} 
+                    
+               
               
                 </div>
             </div>

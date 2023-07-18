@@ -11,6 +11,7 @@ import All from './Components/Coins/All';
 import TopGainers from './Components/Coins/TopGainers';
 import Toplosers from './Components/Coins/Toplosers';
 import Search from './Components/Coins/Search';
+import Crypto from './Components/Crypto/Crypto';
 
 
 function App() {
@@ -27,6 +28,7 @@ return(<>
      <Route path="/top_gainers" exact element={<TopGainers />} />
       <Route path="/top_losers" exact element={<Toplosers />} />
        <Route path="/search" exact element={<Search />} />
+     <Route path="/crypto" exact element={<Crypto />} />
    
     </Routes>
 </>)
