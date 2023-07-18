@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom'
 import All from '../Coins/All'
 const MarketNav = () => {
   return (<>
+  <div className='container main_wrapper'>
     <div className='container market_nav'>
 <div className="top_nav">
 
 <h3>Crypto</h3>
-<Link to=''><BiSearchAlt2 /></Link>
+<Link to='/search'><BiSearchAlt2 /></Link>
 
 </div>
 <div className="topsec_nav">
@@ -21,7 +22,8 @@ const MarketNav = () => {
 </div>
         
     </div>
-    <div><All /></div>
+    </div>
+    {/* <div><All /></div> */}
 
     </>
   )

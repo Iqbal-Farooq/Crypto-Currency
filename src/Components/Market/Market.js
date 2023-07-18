@@ -2,13 +2,17 @@ import React from 'react'
 import MarketNav from './MarketNav'
 import './market.css'
 
+import All from '../Coins/All'
+
 const Market = () => {
-  return (
-    <div>
-      <div>
-        {<MarketNav />}
-      </div>
-    </div>
+  return (<> 
+   
+       
+        <All />
+
+     
+ 
+    </>
   )
 }
 

@@ -1,44 +1,24 @@
 import React,{useState,useEffect} from 'react'
 import Coin from './Coins';
+import MarketNav from '../Market/MarketNav';
+import useFetchcoins from './useFetchcoins';
+
 
 const All = () => {
- const[coins,setCoins]=useState([]);
-  const[search,setSearch]=useState('');
-
-   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=INR&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-         const jsonData = await response.json();
-        console.log(jsonData);
-        setCoins(jsonData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const{coins,loading}=useFetchcoins();
  
   
 
-  const handleChange = e =>{
-    setSearch(e.target.value)
-  }
-  const filteredCoins = coins.filter(coin=>
-    coin.name.toLowerCase().includes(search.toLowerCase())
-    )
-  return (
+
+  
+  return (<>
+  <MarketNav />
+  
+
     <div className="coin-app">
-      <div className="coin-search">
-        {/* <h1 className="coin-text">Search your desired coin</h1> */}
-        <form action="">
-          <input type="text" className="coin-input" placeholder="Provide the coin name" onChange={handleChange}/>
-
-        </form>
-
-      </div>
-      {filteredCoins.map(coin=>{
+     
+   
+      {!loading ?coins.map(coin=>{
         return(
           <Coin 
           key={coin.id} 
@@ -49,13 +29,14 @@ const All = () => {
           marketcap={coin.market_cap}
           price={coin.current_price}
           pricechange={coin.price_change_percentage_24h}
-          // volume={coin.total_volume}
+         
           />
         );
-      })}
+      }):<span className='loader' ></span>}
 
 
     </div>
+    </>
   );
 }
 

@@ -1,0 +1,53 @@
+.scrolling-container {
+    max-width: 600px;
+    padding:0.5rem 1rem;
+   background-color: aquamarine;
+    margin-top: -1rem;
+display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow:hidden ;
+    height:85vh;
+    z-index:1
+
+}
+
+.scrolling-images {
+    padding:0.5rem ;
+    width:50px;
+    height:50px ;
+    animation: scroll 15s linear infinite;
+    -webkit-animation: scroll 15s linear infinite;
+}
+
+.scrolling-images img {
+    width:30px;
+    height:30px;
+   
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+
+    100% {
+        transform: translateY(-500%);
+        -webkit-transform: translateY(-500%);
+        -moz-transform: translateY(-500%);
+        -ms-transform: translateY(-500%);
+        -o-transform: translateY(-500%);
+}
+}
+
+@media(max-width:600px){
+    .scrolling-container {
+width:90%;
+padding: 0.5rem 0;
+
+    }
+}

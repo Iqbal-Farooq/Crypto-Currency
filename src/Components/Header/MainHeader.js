@@ -20,7 +20,7 @@ const MainHeader = () => {
 
     </div>
     <div className='search'>
-       <Link to=''> <BiSearchAlt2 /> </Link>
+       <Link to='/search'> <BiSearchAlt2 /> </Link>
     </div>
 
     </div>
